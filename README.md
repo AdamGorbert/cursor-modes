@@ -7,6 +7,8 @@ Cursors are **configured per-user**, so every player can pick the look they like
 
 ![Foundry v13–v14](https://img.shields.io/badge/Foundry-v13%E2%80%93v14-informational)
 
+<img width="800" height="450" alt="2026-06-1816-32-56-ezgif com-optimize" src="https://github.com/user-attachments/assets/13b1f800-9b24-436b-9cf2-7a2c48a5bf52" />
+
 ## Features
 
 - Per-mode cursor images, matched against `${control}.${tool}` first, then the
@@ -31,7 +33,7 @@ Cursors are **configured per-user**, so every player can pick the look they like
 1. In Foundry, go to **Add-on Modules → Install Module**.
 2. Paste the manifest URL into the **Manifest URL** field:
    ```
-   https://github.com/<your-username>/cursor-modes/releases/latest/download/module.json
+   https://github.com/AdamGorbert/cursor-modes/releases/latest/download/module.json
    ```
 3. Click **Install**.
 

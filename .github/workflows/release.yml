@@ -1,0 +1,59 @@
+name: Release
+
+# Cuts a Foundry-installable release whenever you push a version tag, e.g.:
+#   git tag v0.1.0 && git push origin v0.1.0
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Derive version from tag
+        id: vars
+        run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+
+      - name: Set version + download URL in module.json
+        env:
+          VERSION: ${{ steps.vars.outputs.version }}
+          REPO: ${{ github.repository }}
+        run: |
+          node -e '
+            const fs = require("fs");
+            const m = JSON.parse(fs.readFileSync("module.json", "utf8"));
+            const version = process.env.VERSION;
+            const repo = process.env.REPO;
+            m.version = version;
+            m.url = `https://github.com/${repo}`;
+            m.manifest = `https://github.com/${repo}/releases/latest/download/module.json`;
+            m.download = `https://github.com/${repo}/releases/download/v${version}/module.zip`;
+            fs.writeFileSync("module.json", JSON.stringify(m, null, 2) + "\n");
+          '
+
+      - name: Build module.zip
+        run: |
+          zip -r module.zip \
+            module.json \
+            scripts \
+            styles \
+            templates \
+            lang \
+            cursors \
+            LICENSE \
+            README.md
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: ${{ github.ref_name }}
+          files: |
+            module.json
+            module.zip
