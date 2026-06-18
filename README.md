@@ -31,7 +31,7 @@ Cursors are **configured per-user**, so every player can pick the look they like
 1. In Foundry, go to **Add-on Modules → Install Module**.
 2. Paste the manifest URL into the **Manifest URL** field:
    ```
-   https://github.com/<your-username>/cursor-modes/releases/latest/download/module.json
+   https://github.com/AdamGorbert/cursor-modes/releases/latest/download/module.json
    ```
 3. Click **Install**.
 

@@ -15,7 +15,7 @@
   "languages": [
     { "lang": "en", "name": "English", "path": "lang/en.json" }
   ],
-  "url": "",
-  "manifest": "",
-  "download": ""
+  "url": "https://github.com/AdamGorbert/cursor-modes",
+  "manifest": "https://github.com/AdamGorbert/cursor-modes/releases/latest/download/module.json",
+  "download": "https://github.com/AdamGorbert/cursor-modes/releases/download/v0.1.0/module.zip"
 }
