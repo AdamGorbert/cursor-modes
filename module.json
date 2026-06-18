@@ -1,0 +1,21 @@
+{
+  "id": "cursor-modes",
+  "title": "Cursor Modes",
+  "description": "Show a different mouse cursor on the canvas depending on the active scene-control layer and tool (token select, target, ruler, measurement templates, drawing, walls, etc.). Per-user configurable.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "14"
+  },
+  "authors": [
+    { "name": "Adam Gorbert" }
+  ],
+  "esmodules": ["scripts/cursor-modes.js"],
+  "styles": ["styles/cursor-modes.css"],
+  "languages": [
+    { "lang": "en", "name": "English", "path": "lang/en.json" }
+  ],
+  "url": "",
+  "manifest": "",
+  "download": ""
+}

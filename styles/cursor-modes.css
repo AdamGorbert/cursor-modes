@@ -1,0 +1,25 @@
+/*
+ * Apply the per-mode cursor only to the canvas (#board), not the whole UI.
+ * !important beats Foundry's own `#board { cursor: var(--cursor-*) }` rules
+ * and any inline hover cursor, so the mode cursor stays put while active.
+ * --cm-cursor is set on <body> by applyCursor() and inherits down to #board.
+ */
+body.cm-active #board {
+  cursor: var(--cm-cursor) !important;
+}
+
+/* Settings menu layout */
+.cursor-modes .cm-row .form-fields {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.cursor-modes .cm-row .form-fields input[type="text"] {
+  flex: 1;
+}
+
+.cursor-modes .cm-row .form-fields button.icon {
+  flex: 0 0 auto;
+  width: 2rem;
+}

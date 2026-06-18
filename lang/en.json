@@ -1,0 +1,27 @@
+{
+  "CURSORMODES.MenuName": "Cursor Modes",
+  "CURSORMODES.MenuLabel": "Configure Cursors",
+  "CURSORMODES.MenuTitle": "Cursor Modes — Configuration",
+  "CURSORMODES.MenuHint": "Pick a cursor image for each scene-control mode. A mode with no image keeps Foundry's default cursor. Settings are per-user.",
+  "CURSORMODES.Save": "Save Changes",
+  "CURSORMODES.Browse": "Browse for an image",
+
+  "CURSORMODES.HotspotLegend": "Cursor Hotspot",
+  "CURSORMODES.HotspotHint": "The click point within the image, in pixels from the top-left. For a 32×32 reticle, 16×16 centres it.",
+  "CURSORMODES.HotspotX": "Hotspot X",
+  "CURSORMODES.HotspotY": "Hotspot Y",
+
+  "CURSORMODES.ModesLegend": "Modes",
+  "CURSORMODES.Mode.tokens": "Tokens (layer)",
+  "CURSORMODES.Mode.tokensSelect": "Tokens — Select",
+  "CURSORMODES.Mode.tokensTarget": "Tokens — Target",
+  "CURSORMODES.Mode.tokensRuler": "Tokens — Ruler",
+  "CURSORMODES.Mode.measure": "Measurement Templates",
+  "CURSORMODES.Mode.tiles": "Tiles",
+  "CURSORMODES.Mode.drawings": "Drawings",
+  "CURSORMODES.Mode.walls": "Walls",
+  "CURSORMODES.Mode.lighting": "Lighting",
+  "CURSORMODES.Mode.sounds": "Sounds",
+  "CURSORMODES.Mode.regions": "Regions",
+  "CURSORMODES.Mode.notes": "Notes"
+}
